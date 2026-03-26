@@ -6,16 +6,7 @@ public class HelloWorldApp {
             System.out.println("Hello, World!");
         } 
         else {
-
-            String names = "";
-
-            for (String name : args) {
-                names += name + ", ";
-            }
-
-            // remove last comma and space
-            names = names.substring(0, names.length() - 2);
-
+            String names = String.join(", ", args);
             System.out.println("Hello, " + names + "!");
         }
     }
